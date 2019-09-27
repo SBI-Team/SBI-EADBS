@@ -1,0 +1,18 @@
+#!/bin/bash
+clear && echo -en "\e[3J"
+c='\033[33;1m'
+g='\033[37;1m'
+echo -e "$c Author :$g B4n9Z4tt3r5"
+echo -e "$c Tools  :$g Encrypt And Decrypt Bash Script"
+echo -e "$c Team   :$g ShaDoW BlooD InDoNeSiA"
+sleep 0.7
+echo -e "${c} ╱${g}┏━╸┏━┓╺┳┓┏┓ ┏━┓${c}╲  ┏━┓
+${c}❰ ${g}┣╸ ┣━┫ ┃┃┣┻┓┗━┓${c} ❱ ┃ ┗━┓	]━━❯➤${g} Welcome to the SBI-EADBS
+${c} ╲${g}┗━╸╹ ╹╺┻┛┗━┛┗━┛${c}╱  ┗━┓ ┃
+${c}┏━━━━━━━━━━━━━┓       ┃ ┃	]━━❯➤${g} Pindahkan file yang ingin
+${c}┃${g} ┏━━━━━━━━━┓${c} ┃       ┃ ┃	      ${g}di encrypt atau di decrypt
+${c}┃${g} ┃ ${c}┏━━━━━┓${g} ┃${c} ┃       ┃ ┃	      ${g}ke penyimpanan internal
+${c}┃${g} ┃ ${c}┃${g} SBI${c} ┃${g} ┃${c} ┃       ┃ ┃
+${c}┃${g} ┃ ${c}┗━━━━━┛${g} ┃${c} ┃       ┃ ┃	]━━❯➤ ${g}Gunakan dengan bijak
+${c}┃${g} ┗━━━━━━━━━┛${c} ┗━━━━━━━┛ ┃
+${c}┗━━━━━━━━━━━━━━━━━━━━━━━┛"

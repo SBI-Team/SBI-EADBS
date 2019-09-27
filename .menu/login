@@ -1,0 +1,74 @@
+#!/bin/bash
+a='\e[33;1m'
+b='\e[33;1m'
+c='\e[37;1m'
+
+trap ctrl_c INT
+ctrl_c() {
+echo ""
+sleep 1
+echo -e " $a[$c✘$a]$c CTRL + C CANNOT DISCONTINUE THE SYSTEM"
+sleep 1
+echo -e "     REPEAT!!"
+sleep 3
+log
+}
+
+log() {
+clear && echo -en "\e[3J"
+login
+}
+
+login() {
+echo -e "$b ┏━━$a[${c}LOG'IN TO CONTINUE$a]$b━━━━━❯➤$c `pwd`"
+echo -e "$b ┃$a `date '+%A'`$c `date '+%F %T'`"
+echo -en "$b ┗━━$a[${c}USERNAME$a]$b━━❯➤$c "
+read user
+
+if [ $user = ShaDoW ]
+then
+pswrd
+else
+sleep 1
+echo -e " $a[$c✘$a]$c USERNAME WRONG"
+sleep 1
+echo -e "     REPEAT!!"
+sleep 3
+log
+fi
+}
+
+pswrd() {
+echo -e "$b     ┗━┳━━━━┛"
+echo -en "$b       ┗━━$a[${c}PASSWORD$a]$b━━❯➤$c "
+read -s pswd
+echo ""
+
+if [ $pswd = BlooD ]
+then
+benar
+else
+sleep 1
+echo -e " $a[$c✘$a]$c PASSWORD WRONG"
+sleep 1
+echo -e "     REPEAT!!"
+sleep 3
+salah
+fi
+}
+
+benar() {
+sleep 1
+echo -e " $b[$c✓$b]$c THE PASSWORD YOU ENTERED TRUE"
+sleep 1
+echo -e " $c    YOU CAN ENTER!!"
+sleep 3
+cd
+}
+
+salah() {
+clear && echo -en "\e[3J"
+pswrd
+}
+
+log
